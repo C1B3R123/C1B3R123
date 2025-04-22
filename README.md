@@ -1,4 +1,4 @@
-# 🧑‍💻 Enzo Frank Curi  
+# 🤓Enzo Frank Curi  
 
 Bem-vindo ao meu perfil! Sou um desenvolvedor **Full Stack** apaixonado por tecnologia, sempre explorando novas linguagens e aprimorando minhas habilidades.  
 
