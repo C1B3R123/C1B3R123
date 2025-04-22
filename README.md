@@ -35,4 +35,3 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 
-Vamos juntos construir códigos incríveis e explorar o mundo da tecnologia! 🚀😃  
