@@ -7,7 +7,7 @@ Bem-vindo ao meu perfil! Sou um desenvolvedor **Full Stack** apaixonado por tecn
 ## 🌟 Sobre Mim  
 - 🏷 **Nome:** Enzo Frank Curi  
 - 🎂 **Nascimento:** 30 de Outubro de 2006  
-- 🇧🇷 **Nacionalidade:** Brasileiro  
+- 🌎 **Nacionalidade:** Brasileiro  
 - 💻 **Stack:** Ruby | Python | PHP | JavaScript  
 - 📚 **Focado em:** Banco de Dados e Desenvolvimento Web  
 
