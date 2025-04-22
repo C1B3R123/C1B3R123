@@ -25,7 +25,7 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 ---
 
 ## 🐍 Snake of commits   
-![Snake animation](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/blob/output/github-contribution-grid-snake.svg)  
+![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg) 
 
 ---
 
