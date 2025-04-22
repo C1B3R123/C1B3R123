@@ -29,10 +29,10 @@ jobs:
       - run: git status
 
       # Para as atualizações.
-      - name: Push changes
+      - name: Push to GitHub
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github_token: ${{ secrets.YOUR_SECRET_NAME }}
           branch: master
           force: true
 
