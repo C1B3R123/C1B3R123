@@ -32,7 +32,7 @@ jobs:
       - name: Push to GitHub
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.YOUR_SECRET_NAME }}
+          github_token: ${{ secrets.XD }}
           branch: master
           force: true
 
