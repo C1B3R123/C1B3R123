@@ -24,7 +24,7 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 
-## 🐍 Snake Devourer  
+## 🐍 Snake of commits   
 ![Snake animation](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/blob/output/github-contribution-grid-snake.svg)  
 
 ---
