@@ -25,7 +25,7 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 ---
 
 ## 🐍 Snake of commits   
-![Snake Game](https://github.com/Platane/snk/blob/output/github-contribution-grid-snake.svg) 
+![Snake Game](https://github.com/Platane/snk/blob/output/github-contribution-dark-grid-snake.svg) 
 
 ---
 
