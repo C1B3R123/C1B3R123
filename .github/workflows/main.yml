@@ -14,7 +14,7 @@ jobs:
       - name: Generate GitHub contribution snake
         uses: Platane/snk@v3
         with:
-          github_user_name: Platane
+          github_user_name: C1B3R123
           color_snake: orange
           color_dots: "#FCE5CD,#F4A261,#E76F51,#D94334,#B71C1C"
 
