@@ -1,8 +1,8 @@
-name: Snaki
+name: Generate-Snake-Game
 
 on:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" # Runs daily at midnight
 
 jobs:
   generate-snake:
