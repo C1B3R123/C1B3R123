@@ -1,0 +1,31 @@
+name: Generate Snake Contribution Graph
+
+on:
+  schedule:
+    - cron: "0 0 * * *"
+
+jobs:
+  generate-snake:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Generate GitHub contribution snake
+        uses: Platane/snk@v3
+        with:
+          github_user_name: C1B3R123
+          color_snake: orange
+          color_dots: "#FCE5CD,#F4A261,#E76F51,#D94334,#B71C1C"
+        outputs: |
+          dist/github-snake.svg
+          dist/github-snake-dark.svg?palette=github-dark
+          dist/ocean.gif?color_snake=orange&color_dots=#FCE5CD,#F4A261,#E76F51,#D94334,#B71C1C
+
+      - name: Commit and Push
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add dist/
+          git commit -m "Update snake contribution graph"
+          git push
