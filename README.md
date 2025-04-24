@@ -26,10 +26,10 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 ## 🐍 Snake of contributions
-I'm doing a
+I'm doing more contributions, one day this snake going eat my activity.
 <picture>
   <source
-    media="(prefers-color-scheme: dark ,snake-color: red)"
+    media="(prefers-color-scheme: dark)"
     srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg"
   />
   <source
