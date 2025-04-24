@@ -23,8 +23,6 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)  
 
 ---
-
----
 ## 🐍 Snake of contributions
 I'm doing more contributions, one day this snake going eat my activity.
 <picture>
