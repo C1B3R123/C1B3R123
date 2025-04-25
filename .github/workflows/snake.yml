@@ -1,9 +1,9 @@
-name: Generate-Snake-Game
+name: Gen snake
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 1 * *" # Runs daily at midnight
+    - cron: "0 0 1 * *" # Runs monfely (monthly)
 
 jobs:
   generate-snake:
@@ -17,8 +17,7 @@ jobs:
         with:
           github_user_name: C1B3R123
           color_snake: orange
-          color_dots: "#FCE5CD,#F4A261,#E76F51,#D94334,#B71C1C"
-
+          
       - name: Commit and Push
         run: |
           git config --global user.name "GitHub Action"
