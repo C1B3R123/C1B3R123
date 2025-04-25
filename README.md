@@ -24,7 +24,7 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 ## 🐍 Snake of contributions
-![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.GIF)
 
 ---
 ![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
