@@ -23,10 +23,11 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)  
 
 ---
-## 🐍 Snake of contributions
+## 🐍 Snake of contributions (code from platane)
 ![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.GIF)
 
 ---
+##📊 Status ( code from Platane to XD)
 ![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
 
 ## 📫 Contato  
