@@ -28,6 +28,7 @@ Ferramentas que já tive contato:
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/C1B3R/C1B3R/output/github-contribution-grid-snake-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/C1B3R/C1B3R/output/github-contribution-grid-snake.svg">
 </picture>
+
 ---
 
 ## 📊 Status (code from Platane to XD)
