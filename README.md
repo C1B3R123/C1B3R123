@@ -40,6 +40,7 @@ I'm doing more contributions, one day this snake going eat my activity.
   />
 
 ---
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
 
 ## 📫 Contato  
 📧 **Email:** [enzofrankcuri2020@gmail.com](mailto:enzofrankcuri2020@gmail.com)  
