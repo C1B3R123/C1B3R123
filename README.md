@@ -20,12 +20,13 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
                                           
 ---
 ## 🐍 Snake of contributions (code from platane)
-![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.GIF)
+![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.gif)
 
 ---
+
 ##📊 Status ( code from Platane to XD)
 ![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
-
+---
 ## 📫 Contato  
 📧 **Email:** [enzofrankcuri2020@gmail.com](mailto:enzofrankcuri2020@gmail.com)  
 📱 **Telefone:** +55 65 999362432  
