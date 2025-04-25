@@ -30,5 +30,7 @@ Ferramentas que já tive contato:
 </picture>
 ---
 ## 📊 Status (code from Platane to XD)
+
 ![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
+
 ---
