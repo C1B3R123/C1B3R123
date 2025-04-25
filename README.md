@@ -24,23 +24,10 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 ## 🐍 Snake of contributions
-I'm doing more contributions, one day this snake going eat my activity.
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
-  />
-  <img
-    alt="github contribution grid snake animation"
-    src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg"
-  />
+![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
 
 ---
-![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
+![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
 
 ## 📫 Contato  
 📧 **Email:** [enzofrankcuri2020@gmail.com](mailto:enzofrankcuri2020@gmail.com)  
