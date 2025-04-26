@@ -18,13 +18,15 @@ Bem-vindo ao meu perfil ! Sou um desenvolvedor **Full Stack** apaixonado por tec
 Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualquer linguagem de programação que me apresentem. Sempre busco novos desafios e inovações no mundo da programação!  
 ---
 
-## 🚀 Tecnologias e Ferramentas  
+## 🚀 Tecnologias e Ferramentas 
+
 Ferramentas que já tive contato:
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white)![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)
-                                          
+
 ---
 ## 🐍 Snake of contributions (code from Platane)
 ![Snake animation](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+
 ---
 
 ## 📊 Status (code from Platane to XD)
