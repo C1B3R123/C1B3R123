@@ -24,11 +24,7 @@ Ferramentas que já tive contato:
                                           
 ---
 ## 🐍 Snake of contributions (code from Platane)
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/C1B3R/C1B3R/output/github-contribution-grid-snake-dark.svg">
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/C1B3R/C1B3R/output/github-contribution-grid-snake.svg">
-</picture>
-
+![Snake animation](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
 ---
 
 ## 📊 Status (code from Platane to XD)
