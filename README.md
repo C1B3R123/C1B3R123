@@ -22,6 +22,7 @@ Bem-vindo ao meu perfil ! Sou um desenvolvedor **Full Stack** apaixonado por tec
 
 ---
 ## 🐍 Snake of contributions (code from Platane)
+(Vai ficar assim por enquanto XD ) 
 ![C1B3R123 Snake svg](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
 
 
