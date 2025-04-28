@@ -25,7 +25,7 @@ Ferramentas que já tive contato:
 
 ---
 ## 🐍 Snake of contributions (code from Platane)
-![Snake animation](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+![C1B3RS123's GitHub Snake](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
 
 ---
 
