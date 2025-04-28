@@ -2,18 +2,17 @@
 
 Bem-vindo ao meu perfil ! Sou um desenvolvedor **Full Stack** apaixonado por tecnologia, sempre explorando novas linguagens e aprimorando minhas habilidades.  
 ---
-## 📫 Contato  
-📧 **Email:** [enzofrankcuri2020@gmail.com](mailto:enzofrankcuri2020@gmail.com)  
-📱 **Telefone:** +55 (65) 99936-2432
+## 📫 Contatos
+[![Email](https://img.shields.io/badge/Email-Enviar%20Mensagem-red?style=for-the-badge&logo=gmail)](mailto:enzofrankcuri2020@gmail.com?subject=Vi%20seu%20GitHub%20e%20tive%20interesse%20em%20seu%20perfil.)
+[![WhatsApp](https://img.shields.io/badge/WhatsApp-Enviar%20Mensagem-25D366?style=for-the-badge&logo=whatsapp)](https://wa.me/5565999362432?text=Olá%20Enzo,%20Vi%20seu%20github%20e%20tive%20interesse%20em%20seu%20perfil.)
+
 ---
 ## 🌟 Sobre Mim  
 - 🏷 **Nome:** Enzo Frank Curi  
 - 🎂 **Nascimento:** 30 de Outubro de 2006  
-- 🌎 **Nacionalidade:** Brasileiro  
-- 💻 **Stack:** Ruby | Python | PHP | JavaScript  
-- 📚 **Focado em:** Banco de Dados e Desenvolvimento Web
-- 
-Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualquer linguagem de programação que me apresentem. Sempre busco novos desafios e inovações no mundo da programação.
+- 🌎 **Nacionalidade:** Brasileiro 
+- 📚 **Focado em:** Melhorar minhas habilidades em  full stack.
+
 ---
 
 ## 🚀 Tecnologias e Ferramentas 
