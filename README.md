@@ -13,13 +13,13 @@ Bem-vindo ao meu perfil ! Sou um desenvolvedor **Full Stack** apaixonado por tec
 - 🎂 **Nascimento:** 30 de Outubro de 2006  
 - 🌎 **Nacionalidade:** Brasileiro  
 - 💻 **Stack:** Ruby | Python | PHP | JavaScript  
-- 📚 **Focado em:** Banco de Dados e Desenvolvimento Web  
-
-Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualquer linguagem de programação que me apresentem. Sempre busco novos desafios e inovações no mundo da programação!  
+- 📚 **Focado em:** Banco de Dados e Desenvolvimento Web
+- 
+Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualquer linguagem de programação que me apresentem. Sempre busco novos desafios e inovações no mundo da programação.
 ---
 
 ## 🚀 Tecnologias e Ferramentas 
-Ferramentas que já tive contato:
+**Ferramentas que já tive contato:**
 
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)
 
