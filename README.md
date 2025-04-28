@@ -4,10 +4,8 @@ Bem-vindo ao meu perfil ! Sou um desenvolvedor **Full Stack** apaixonado por tec
 ---
 ## 📫 Contato  
 📧 **Email:** [enzofrankcuri2020@gmail.com](mailto:enzofrankcuri2020@gmail.com)  
-📱 **Telefone:** +55 65 999362432  
+📱 **Telefone:** +55 (65) 99936-2432
 ---
-
-
 ## 🌟 Sobre Mim  
 - 🏷 **Nome:** Enzo Frank Curi  
 - 🎂 **Nascimento:** 30 de Outubro de 2006  
