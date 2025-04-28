@@ -13,7 +13,7 @@ jobs:
       - uses: Platane/snk@master
         with:
           github_user_name: C1B3R123
-          outputs: dist/snake.svg
+          outputs: dist/C1B3RS123's GitHub Snake.svg
 
       - uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
