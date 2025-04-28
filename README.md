@@ -23,7 +23,8 @@ Sou um entusiasta da tecnologia com facilidade para aprender e evoluir em qualqu
 
 ---
 ## 🐍 Snake of contributions (code from Platane)
-![C1B3RS123's GitHub Snake](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+![snake gif](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+
 
 ---
 
