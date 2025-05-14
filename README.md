@@ -27,7 +27,7 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 
 ---  
 
-## 📊 Status (code from Platane to XD)
+## 📊 Status
 
 ![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical) <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=omni"/>
 
