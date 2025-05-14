@@ -14,34 +14,19 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 - 📚 **Focado em:** Melhorar minhas habilidades em  full stack.
 
 ---
-
 ## 🚀 Tecnologias e Ferramentas 
 **Ferramentas que já tive contato:**
-
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)
 
+## 🔝 Linguagens mais usadas
+![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=omni)
 ---
-## 🐍 Snake of contributions
-
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/C1B3R123/C1B3R123/output/github-contribution-grid-snake-dark.svg"
-  />
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/C1B3R123/C1B3R123/github-contribution-grid-snake.svg"
-  />
-  <img
-    alt="github contribution grid snake animation"
-    src="https://raw.githubusercontent.com/C1B3R123/C1B3R123/github-contribution-grid-snake.svg"
-  />
-</picture>
+## 🐍 GitHub Contribution Snake
+![Snk SVG](https://raw.githubusercontent.com/C1B3R123/output/github-contribution-grid-snake.svg)
 
 ---  
-
-## 📊 Status
-
-![C1B3RS123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical) <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=omni"/>
+## 📊 GitHub Stats
+![C1B3R123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
 
 ---
+
