@@ -1,13 +1,12 @@
-name: Generate Datas
+name: Generate Data
 
 on:
   schedule:
-    - cron: "0 0 27 * *"
+    - cron: "0 0 27 * *" 
   workflow_dispatch: 
-
 jobs:
   update:
-    name: Update GitHub Stats and Snake GIF
+    name: Generate SVG Snake
     runs-on: ubuntu-latest
     permissions:
       contents: write 
@@ -16,18 +15,16 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate orange snake SVG
+      - name: Generate snake SVG
         uses: Platane/snk/svg-only@v3
         id: snake-svg
         with:
           github_user_name: ${{ github.repository_owner }}
-          svg_out_path: dist/github-contribution-grid-snake.svg
-          color_snake: "#FFA500" # Orange
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy SVG to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
-          build_dir: dist
+          build_dir: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
