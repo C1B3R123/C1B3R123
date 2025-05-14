@@ -22,11 +22,11 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=omni)
 ---
 ## 🐍 GitHub Contribution Snake
-![Snk SVG](https://raw.githubusercontent.com/C1B3R123/output/github-contribution-grid-snake.svg)
+![Snake Commit](https://github.com/C1B3R123/C1B3R123/output/github-contribution-grid-snake.svg)
 
 ---  
 ## 📊 GitHub Stats
-![C1B3R123's GitHub stats](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
+![Status in graphics](https://github-readme-stats.vercel.app/api?username=C1B3R123&show_icons=true&theme=radical)
 
 ---
 
