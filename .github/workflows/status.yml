@@ -16,13 +16,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate orange snake animation
-        uses: Platane/snk@master
-        id: snake-gif
+      - name: Generate orange snake SVG
+        uses: Platane/snk/svg-only@v3
+        id: snake-svg
         with:
           github_user_name: ${{ github.repository_owner }}
           svg_out_path: dist/github-contribution-grid-snake.svg
-          color_snake: "#FFA500"
+          color_snake: "#FFA500" # Orange
 
       - name: Deploy to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
