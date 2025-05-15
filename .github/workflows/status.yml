@@ -16,25 +16,24 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Generate snake SVG Animation
+      - name: Generate snake SVG Animations (Orange with Light/Dark Dots)
         uses: Platane/snk@v3 # Verifique a versão mais recente
-        id: snake-svg-animation
+        id: snake-svg-orange-dots
         with:
           github_user_name: ${{ github.repository_owner }}
-          outputs: github-contribution-grid-snake.svg?sanitize=true # Tentar gerar na raiz e mover depois
-          color_snake: '#FFA500' # A configuração 'outputs: dist/...' parece não estar funcionando como esperado para colocar em subdiretório
+          # Definindo os arquivos de saída: cobra laranja com pontos claro/escuro
+          # As cores dos pontos são os códigos hexadecimais padrão do GitHub para cada tema
+          # Gerando diretamente na raiz do diretório de trabalho
+          outputs: |
+            github-snake-orange-lightdots.svg?color_snake=#FFA500&color_dots=#ebedf0,#9be9a8,#30c463,#30a1f4,#216e39&sanitize=true
+            github-snake-orange-darkdots.svg?color_snake=#FFA500&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&sanitize=true
 
-      - name: Create dist directory
-        run: mkdir dist
+      # Removidas as etapas de criar diretório 'dist' e mover arquivos
 
-      - name: Move generated SVG to dist
-        # Ajuste o nome do arquivo se o nome real gerado for diferente (ex: github-contribution-grid-snakes).
-        run: mv github-contribution-grid-snake.svg dist/
-
-      - name: Deploy SVG to GitHub Pages
+      - name: Deploy SVGs to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
-          build_dir: dist # Agora aponta para o diretório onde o SVG foi movido
+          build_dir: . # Aponta para a raiz do diretório de trabalho
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
