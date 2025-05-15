@@ -22,7 +22,7 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: github-contribution-grid-snake.svg?sanitize=true # Tentar gerar na raiz e mover depois
-          # A configuração 'outputs: dist/...' parece não estar funcionando como esperado para colocar em subdiretório
+          color_snake: '#FFA500' # A configuração 'outputs: dist/...' parece não estar funcionando como esperado para colocar em subdiretório
 
       - name: Create dist directory
         run: mkdir dist
