@@ -20,6 +20,19 @@ jobs:
       - name: Create dist directory
         run: mkdir -p dist # Use -p para criar o diretório e subdiretórios se não existirem
 
+      # --- Nova Etapa Simplificada para Garantir a Branch Output Remota ---
+      # Esta etapa tenta criar a branch 'output' remotamente se ela não existir
+      - name: Ensure output branch exists remotely
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # Tenta empurrar o commit atual (HEAD) para a branch 'output' no remoto 'origin'
+          # --force é usado para garantir que a branch seja criada/atualizada
+          git push origin HEAD:refs/heads/output --force
+        # Permite que o workflow continue mesmo se este push falhar (ex: branch já existe)
+        continue-on-error: true
+      # --- Fim da Nova Etapa ---
+
       - name: Generate snake SVG
         uses: Platane/snk@v3 # Verifique a versão mais recente
         id: snake-svg-orange-dots
@@ -35,5 +48,4 @@ jobs:
           target_branch: output
           build_dir: dist
         env:
-
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
