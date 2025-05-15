@@ -23,7 +23,7 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 
 ---
 ## 🐍 GitHub Contribution Snake
-![Contribution Snake](https://github.com/C1B3R123/C1B3R123/blob/output/dist/github-contribution-grid-snake.svg?raw=true)
+![Contribution Snake](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg?raw=true)
 
 ---  
 ## 📊 GitHub Stats
