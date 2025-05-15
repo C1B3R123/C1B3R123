@@ -20,9 +20,10 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 
 ## 🔝 Linguagens mais usadas
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=omni)
+
 ---
 ## 🐍 GitHub Contribution Snake
-![Snake Commit](https://github.com/C1B3R123/C1B3R123/blob/output/github-contribution-grid-snake.svg)
+![Contribution Snake](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/blob/output/dist/github-contribution-grid-snake.svg?raw=true)
 
 ---  
 ## 📊 GitHub Stats
