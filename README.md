@@ -24,8 +24,8 @@ Sempre explorando novas tecnologias e aprimorando minhas habilidades.
 ---
 ## 🐍 GitHub Contribution Snake
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/C1B3R123/C1B3R123/blob/output/dist/github-snake-darkdots.svg?raw=true">
-  <source media="(prefers-color-scheme: light)" srcset="https://github.com/C1B3R123/C1B3R123/blob/output/dist/github-snake-lightdots.svg?raw=true">
+  <source media="(prefers-color-scheme: dark)" srcset="https://github.com/C1B3R123/C1B3R123/blob/output/github-snake-darkdots.svg?raw=true">
+  <source media="(prefers-color-scheme: light)" srcset="https://github.com/C1B3R123/C1B3R123/blob/output/github-snake-lightdots.svg?raw=true">
   <img alt="GitHub Contribution Snake" src="https://github.com/C1B3R123/C1B3R123/blob/output/dist/github-snake-lightdots.svg?raw=true">
 </picture>
 
