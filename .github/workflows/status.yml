@@ -10,19 +10,22 @@ jobs:
     name: Generate SVG Snake
     runs-on: ubuntu-latest
     permissions:
-      contents: write # Necessário para criar/atualizar a branch output
+      contents: write
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # Adicionando de volta a etapa para criar o diretório 'dist'
       - name: Create dist directory
-        run: mkdir -p dist # Use -p para criar o diretório e subdiretórios se não existirem
+        run: mkdir -p dist
 
-      # --- Nova Etapa Simplificada para Garantir a Branch Output Remota ---
-      # Esta etapa tenta criar a branch 'output' remotamente se ela não existir
-      # Usando uma branch temporária local para um push mais explícito
+      - name: Generate random daily snake color
+        id: calculate_color
+        run: |
+          RANDOM_HEX=$(openssl rand -hex 3)
+          DAILY_COLOR="#${RANDOM_HEX}"
+          echo "DAILY_COLOR=${DAILY_COLOR}" >> $GITHUB_OUTPUT
+
       - name: Ensure output branch exists remotely
         run: |
           git config user.name "github-actions[bot]"
@@ -34,18 +37,15 @@ jobs:
           git checkout main
           git branch -D temp-output
         continue-on-error: true
-      # --- Fim da Nova Etapa ---
-
 
       - name: Generate snake SVG
-        uses: Platane/snk@v3 # Verifique a versão mais recente
+        uses: Platane/snk@v3
         id: snake-svg-orange-dots
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            # Removido color_dots, mantido color_snake e sanitize
-            dist/github-snake-orange-lightdots.svg?color_snake=#FFA500&palette=github-light&sanitize=true
-            dist/github-snake-orange-darkdots.svg?color_snake=#FFA500&palette=github-dark&sanitize=true
+            dist/github-snake-lightdots.svg?color_snake=${{ steps.calculate_color.outputs.DAILY_COLOR }}&palette=github-light&sanitize=true
+            dist/github-snake-darkdots.svg?color_snake=${{ steps.calculate_color.outputs.DAILY_COLOR }}&palette=github-dark&sanitize=true
 
       - name: Deploy SVGs to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
