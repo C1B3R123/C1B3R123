@@ -1,7 +1,7 @@
 # 🤓Enzo Frank Curi  
 ## 🌟 Sobre Mim  
 - 🎂 **Nascimento:** 30 de Outubro de 2006  
-- 🌎 **Nacionalidade:** Brasileiro 
+- 🌎🇧🇷 **Nacionalidade:** Brasileiro 
 
 ## Sempre explorando novas tecnologias e aprimorando minhas habilidades. 
 
