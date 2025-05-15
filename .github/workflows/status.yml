@@ -22,7 +22,8 @@ jobs:
       - name: Generate random daily snake color
         id: calculate_color
         run: |
-          RANDOM_HEX=$(openssl rand -hex 3)
+          RANDOM_DECIMAL=$(shuf -i 1-16777214 -n 1)
+          RANDOM_HEX=$(printf '%06x\n' "$RANDOM_DECIMAL")
           DAILY_COLOR="#${RANDOM_HEX}"
           echo "DAILY_COLOR=${DAILY_COLOR}" >> $GITHUB_OUTPUT
 
