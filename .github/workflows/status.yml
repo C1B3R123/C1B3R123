@@ -16,24 +16,30 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
 
+      - name: Ensure output branch exists
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout output || git checkout --orphan output
+          git commit --allow-empty -m "Ensure output branch exists for deployment"
+          git push origin output --force --set-upstream
+          git checkout main
+          git branch -D output
+        continue-on-error: true
+
       - name: Generate snake SVG Animations (Orange with Light/Dark Dots)
-        uses: Platane/snk@v3 # Verifique a versão mais recente
+        uses: Platane/snk@v3
         id: snake-svg-orange-dots
         with:
           github_user_name: ${{ github.repository_owner }}
-          # Definindo os arquivos de saída: cobra laranja com pontos claro/escuro
-          # As cores dos pontos são os códigos hexadecimais padrão do GitHub para cada tema
-          # Gerando diretamente na raiz do diretório de trabalho
           outputs: |
             github-snake-orange-lightdots.svg?color_snake=#FFA500&color_dots=#ebedf0,#9be9a8,#30c463,#30a1f4,#216e39&sanitize=true
             github-snake-orange-darkdots.svg?color_snake=#FFA500&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&sanitize=true
-
-      # Removidas as etapas de criar diretório 'dist' e mover arquivos
 
       - name: Deploy SVGs to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
-          build_dir: . # Aponta para a raiz do diretório de trabalho
+          build_dir: .
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
