@@ -10,14 +10,14 @@ jobs:
     name: Generate SVG Snake
     runs-on: ubuntu-latest
     permissions:
-      contents: write
+      contents: write # Necessário para criar/atualizar a branch output
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        
+
       - name: Generate snake SVG Animations (Orange with Light/Dark Dots)
-        uses: Platane/snk@v3
+        uses: Platane/snk@v3 # Verifique a versão mais recente
         id: snake-svg-orange-dots
         with:
           github_user_name: ${{ github.repository_owner }}
@@ -29,6 +29,6 @@ jobs:
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
-          build_dir: .
-env:
-  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          build_dir: . # Aponta para a raiz do diretório de trabalho
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
