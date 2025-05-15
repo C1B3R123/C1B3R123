@@ -22,16 +22,20 @@ jobs:
 
       # --- Nova Etapa Simplificada para Garantir a Branch Output Remota ---
       # Esta etapa tenta criar a branch 'output' remotamente se ela não existir
+      # Usando uma branch temporária local para um push mais explícito
       - name: Ensure output branch exists remotely
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # Tenta empurrar o commit atual (HEAD) para a branch 'output' no remoto 'origin'
-          # --force é usado para garantir que a branch seja criada/atualizada
-          git push origin HEAD:refs/heads/output --force
-        # Permite que o workflow continue mesmo se este push falhar (ex: branch já existe)
+          git branch temp-output
+          git checkout temp-output
+          git commit --allow-empty -m "Initial commit for output branch"
+          git push origin temp-output:refs/heads/output --force
+          git checkout main
+          git branch -D temp-output
         continue-on-error: true
       # --- Fim da Nova Etapa ---
+
 
       - name: Generate snake SVG
         uses: Platane/snk@v3 # Verifique a versão mais recente
@@ -39,8 +43,9 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake-orange-lightdots.svg?color_snake=#FFA500&color_dots=#ebedf0,#9be9a8,#30c463,#30a1f4,#216e39&sanitize=true
-            dist/github-snake-orange-darkdots.svg?color_snake=#FFA500&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&sanitize=true
+            # Removido color_dots, mantido color_snake e sanitize
+            dist/github-snake-orange-lightdots.svg?color_snake=#FFA500&palette=github-light&sanitize=true
+            dist/github-snake-orange-darkdots.svg?color_snake=#FFA500&palette=github-dark&sanitize=true
 
       - name: Deploy SVGs to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
