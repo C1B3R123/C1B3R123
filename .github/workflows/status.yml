@@ -21,14 +21,23 @@ jobs:
         id: snake-svg-orange-dots
         with:
           github_user_name: ${{ github.repository_owner }}
+          # Definindo os arquivos de saída: cobra laranja com pontos claro/escuro
+          # As cores dos pontos são os códigos hexadecimais padrão do GitHub para cada tema
+          # Gerando agora dentro do diretório 'dist'
           outputs: |
-            github-snake-orange-lightdots.svg?color_snake=#FFA500&color_dots=#ebedf0,#9be9a8,#30c463,#30a1f4,#216e39&sanitize=true
-            github-snake-orange-darkdots.svg?color_snake=#FFA500&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&sanitize=true
+            dist/github-snake-orange-lightdots.svg?color_snake=#FFA500&color_dots=#ebedf0,#9be9a8,#30c463,#30a1f4,#216e39&sanitize=true
+            dist/github-snake-orange-darkdots.svg?color_snake=#FFA500&color_dots=#161b22,#0e4429,#006d32,#26a641,#39d353&sanitize=true
+
+      # Adicionando de volta a etapa para criar o diretório 'dist'
+      - name: Create dist directory
+        run: mkdir -p dist # Use -p para criar o diretório e subdiretórios se não existirem
+
+      # Não precisamos mais da etapa 'mv' porque a action 'snk' está gerando diretamente em 'dist/'
 
       - name: Deploy SVGs to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
-          build_dir: . # Aponta para a raiz do diretório de trabalho
+          build_dir: dist # Aponta para o diretório 'dist'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
