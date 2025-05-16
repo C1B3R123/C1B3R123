@@ -1,4 +1,4 @@
-name: Update README Age (Calculate from Birth Date)
+name: Update README Age (Hidden Birth Date)
 
 on:
   schedule:
@@ -13,10 +13,22 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Get birth date from README (hidden)
+        id: get_birth_date
+        run: |
+          BIRTH_DATE=$(grep ')')
+          if [ -z "$BIRTH_DATE" ]; then
+            echo "::error::Hidden birth date marker '' not found or is empty in README.md."
+            echo "Please add a hidden marker like ''."
+            exit 1
+          fi
+          echo "Birth date found: $BIRTH_DATE"
+          echo "birth_date=$BIRTH_DATE" >> $GITHUB_OUTPUT
+
       - name: Calculate age from birth date
         id: calculate_age
         run: |
-          BIRTH_DATE="2006-10-30"
+          BIRTH_DATE=${{ steps.get_birth_date.outputs.birth_date }}
           CURRENT_DATE=$(date +%Y-%m-%d)
           BIRTH_YEAR=$(date -d "$BIRTH_DATE" +%Y)
           BIRTH_MONTH=$(date -d "$BIRTH_DATE" +%m)
@@ -34,7 +46,7 @@ jobs:
       - name: Update README with new age
         run: |
           NEW_AGE=${{ steps.calculate_age.outputs.calculated_age }}
-          sed -i "/^- 🤓 \*\*Minha idade:\*\*/c\\- 🤓 **Minha idade:** ${NEW_AGE}" README.md
+          sed -i "s/\(- 🤓 \*\*Minha idade:\*\*\s*\)\d+/\1${NEW_AGE}/" README.md
           if git diff --exit-code README.md; then
             echo "No changes detected in README.md. Skipping commit."
           else
@@ -42,6 +54,6 @@ jobs:
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add README.md
-            git commit -m "Automated: Update age in README to ${NEW_AGE}"
+            git commit -m "Parabéns pelos ${NEW_AGE} anos🎊, não esqueça do seu commit diario :D"
             git push
           fi
