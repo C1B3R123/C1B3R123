@@ -1,6 +1,6 @@
 # Enzo Frank Curi  
 ## 🌟 Sobre Mim  
-- 🤓 Programador com \(
+- 🤓 Programador com (XX anos) de idade
 - 🌎🇧🇷 **Nacionalidade:** Brasileiro 
 
 ## Sempre explorando novas tecnologias e aprimorando minhas habilidades. 
