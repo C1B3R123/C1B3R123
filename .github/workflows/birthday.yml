@@ -2,13 +2,12 @@ name: Update Age
 
 on:
   schedule:
-    # Sim, Minha data de nascimento é (30/10/2006), mude esta data para que 
     - cron: "0 0 30 10 *"
   workflow_dispatch:
 
 jobs:
   update_age:
-    name: Calculate and Update Age on Birthday
+    name: Update Age on Birthday
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -19,48 +18,37 @@ jobs:
 
       - name: Calculate Age and Update README
         run: |
-          BIRTH_YEAR=2006
-          CURRENT_YEAR=$(date +%Y)
-          NEW_AGE=$((CURRENT_YEAR - BIRTH_YEAR))
+          set -x
           README_FILE="README.md"
-          NEW_LINE="- Programador com (${NEW_AGE} anos) de idade"
           SEARCH_PATTERN="^- Programador com \("
           LINE_NUM=$(grep -n -m 1 -E "$SEARCH_PATTERN" $README_FILE | cut -d : -f 1)
+
           if [ -z "$LINE_NUM" ]; then
-            ORIGINAL_BIRTH_LINE="- 🎂 **Nascimento:** 30 de Outubro de 2006"
-            LINE_NUM=$(grep -n -m 1 "$ORIGINAL_BIRTH_LINE" $README_FILE | cut -d : -f 1)
-            if [ -z "$LINE_NUM" ]; then
-              echo "Erro: Nenhuma das linhas esperadas foi encontrada em $README_FILE. Verifique o README.md e os padrões de busca no workflow."
-              exit 1
-            else
-              echo "Linha original da data de nascimento encontrada no número: $LINE_NUM"
-              if [[ "$RUNNER_OS" == "macOS" ]]; then
-                sed -i '' "${LINE_NUM}s|^.*|$NEW_LINE|" $README_FILE
-              else
-                sed -i "${LINE_NUM}s|^.*|$NEW_LINE|" $README_FILE
-              fi
-              echo "README.md atualizado com idade: ${NEW_AGE}"
-            fi
+            echo "Erro: A linha com o padrão '$SEARCH_PATTERN' não foi encontrada em $README_FILE."
+            echo "Por favor, certifique-se de que seu README.md contém uma linha no formato '- Programador com (XX anos) de idade'."
+            exit 1
           else
-            echo "Linha 'Programador com...' encontrada no número: $LINE_NUM"
+            echo "Linha encontrada no número: $LINE_NUM"
+            CURRENT_AGE=$(grep -oP "$SEARCH_PATTERN\([0-9]+\)" $README_FILE | grep -oP "[0-9]+")
+            echo "Idade atual encontrada: $CURRENT_AGE"
+            NEW_AGE=$((CURRENT_AGE + 1))
+            echo "Nova idade calculada: $NEW_AGE"
             if [[ "$RUNNER_OS" == "macOS" ]]; then
-              sed -i '' "${LINE_NUM}s|^.*|$NEW_LINE|" $README_FILE
+              sed -i '' "${LINE_NUM}s/([0-9]\+)/(${NEW_AGE})/" $README_FILE
             else
-              sed -i "${LINE_NUM}s|^.*|$NEW_LINE|" $README_FILE
+              sed -i "${LINE_NUM}s/([0-9]\+)/(${NEW_AGE})/" $README_FILE
             fi
             echo "README.md atualizado com idade: ${NEW_AGE}"
           fi
 
-
       - name: Commit and Push Changes
         run: |
-          # Verifica se há alterações para commitar
           if git diff --quiet $README_FILE; then
             echo "Nenhuma alteração no README.md. Pulando commit e push."
           else
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git add $README_FILE
-            git commit -m "Feliz Aniversário! Idade atualizada para ${NEW_AGE} anos🎉, lembre-se do que importa e seja feliz em sua vida. "
+            git commit -m "Feliz Aniversário! Idade atualizada para ${NEW_AGE} anos 🎉"
             git push origin main
           fi
