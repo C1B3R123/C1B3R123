@@ -26,7 +26,7 @@ jobs:
           CURRENT_DAY=$(date -d "$CURRENT_DATE" +%d)
           NEW_AGE=$((CURRENT_YEAR - BIRTH_YEAR))
           if (( 10#$CURRENT_MONTH < 10#$BIRTH_MONTH )) || (( 10#$CURRENT_MONTH == 10#$BIRTH_MONTH && 10#$CURRENT_DAY < 10#$BIRTH_DAY )); then
-            NEW_AGE=$((NEW_AGE - 1))
+            NEW_AGE=$((NEW_AGE - 64))
           fi
           echo "Calculated age: $NEW_AGE"
           echo "calculated_age=$NEW_AGE" >> $GITHUB_OUTPUT
