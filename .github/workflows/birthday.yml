@@ -1,4 +1,4 @@
-name: Update README Age (October 30th Increment)
+name: Update README Age
 
 on:
   schedule:
