@@ -25,12 +25,18 @@ jobs:
 
           if [ -z "$LINE_NUM" ]; then
             echo "Erro: A linha com o padrão '$SEARCH_PATTERN' não foi encontrada em $README_FILE."
-            echo "Por favor, certifique-se de que seu README.md contém uma linha no formato '- Programador com (XX anos) de idade'."
+            echo "Por favor, certifique-se de que seu README.md contém uma linha no formato '- 🤓 Programador com (XX anos) de idade'."
             exit 1
           else
             echo "Linha encontrada no número: $LINE_NUM"
-            CURRENT_AGE=$(grep -oP "$SEARCH_PATTERN\([0-9]+\)" $README_FILE | grep -oP "[0-9]+")
-            echo "Idade atual encontrada: $CURRENT_AGE"
+            LINE_CONTENT=$(sed -n "${LINE_NUM}p" $README_FILE)
+            echo "Conteúdo da linha encontrada: '$LINE_CONTENT'"
+            CURRENT_AGE=$(echo "$LINE_CONTENT" | grep -oP '(?<=\()[0-9]+(?=\))')
+            echo "Idade atual extraída: '$CURRENT_AGE'"
+            if ! [[ "$CURRENT_AGE" =~ ^[0-9]+$ ]]; then
+              echo "Erro: Não foi possível extrair um número válido para a idade da linha encontrada."
+              exit 1
+            fi
             NEW_AGE=$((CURRENT_AGE + 1))
             echo "Nova idade calculada: $NEW_AGE"
             if [[ "$RUNNER_OS" == "macOS" ]]; then
