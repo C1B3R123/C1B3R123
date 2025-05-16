@@ -1,7 +1,8 @@
-name: Update README Age
+name: Update README Age (October 30th Increment)
+
 on:
   schedule:
-    - cron: '0 0 30 10 *'
+    - cron: '0 0 30 10 *' 
   workflow_dispatch:
 
 jobs:
@@ -15,12 +16,14 @@ jobs:
       - name: Get current age from README
         id: get_age
         run: |
-          CURRENT_AGE=$(grep -oP '\K\d+(?=)' README.md)
+          CURRENT_AGE=$(grep 'Minha idade:' README.md | grep -oP 'Minha idade:\s*\K\d+')
+
           if [ -z "$CURRENT_AGE" ]; then
-            echo "::error::Age marker '...' not found or is empty in README.md."
-            echo "Please add a marker like 'My age is 25.'"
+            echo "::error::'**Minha idade:**' marker followed by a number not found in README.md."
+            echo "Please ensure your README.md has a line like 'Minha idade: 25'."
             exit 1
           fi
+
           echo "Current age found in README: $CURRENT_AGE"
           echo "current_age=$CURRENT_AGE" >> $GITHUB_OUTPUT
 
@@ -29,8 +32,8 @@ jobs:
           CURRENT_AGE=${{ steps.get_age.outputs.current_age }}
           AGE_INCREMENT=1
           NEW_AGE=$((CURRENT_AGE + AGE_INCREMENT))
-          echo "-🤓 Programdor com $NEW_AGE anos de idade "
-          sed -i "s/[0-9]*/${NEW_AGE}/" README.md
+          echo "Calculated new age: $NEW_AGE"
+          sed -i "s/**Minha idade:**\s*[0-9]*/Minha idade: ${NEW_AGE}/" README.md
           if git diff --exit-code README.md; then
             echo "No changes detected in README.md. Skipping commit."
           else
