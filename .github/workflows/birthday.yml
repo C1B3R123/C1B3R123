@@ -1,71 +1,43 @@
-name: Update Age
-
+name: Update README Age
 on:
   schedule:
-    - cron: "0 0 30 10 *"
+    - cron: '0 0 * * *'
   workflow_dispatch:
 
 jobs:
-  update_age:
-    name: Update Age on Birthday
+  update-age:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Calculate Age and Update README
+      - name: Get current age from README
+        id: get_age
         run: |
-          BIRTH_YEAR=2006
-          BIRTH_MONTH=10
-          BIRTH_DAY=30
-
-          CURRENT_YEAR=$(date +%Y)
-          CURRENT_MONTH=$(date +%m)
-          CURRENT_DAY=$(date +%d)
-
-          AGE=$((CURRENT_YEAR - BIRTH_YEAR))
-
-          if (( 10#$CURRENT_MONTH < 10#$BIRTH_MONTH )) || (( 10#$CURRENT_MONTH == 10#$BIRTH_MONTH && 10#$CURRENT_DAY < 10#$BIRTH_DAY )); then
-              AGE=$((AGE - 1))
-          fi
-
-          NEW_AGE=$AGE
-
-          README_FILE="README.md"
-
-          SEARCH_PATTERN="Programador com.*anos de idade"
-
-          LINE_NUM=$(grep -n -m 1 -i -E "$SEARCH_PATTERN" $README_FILE | cut -d : -f 1)
-
-          if [ -z "$LINE_NUM" ]; then
-            echo "Erro: A linha contendo 'Programador com' e 'anos de idade' não foi encontrada em $README_FILE."
-            echo "Por favor, certifique-se de que seu README.md contém uma linha com este texto."
+          CURRENT_AGE=$(grep -oP '\K\d+(?=)' README.md)
+          if [ -z "$CURRENT_AGE" ]; then
+            echo "::error::Age marker '...' not found or is empty in README.md."
+            echo "Please add a marker like 'My age is 25.'"
             exit 1
-          else
-            echo "Linha encontrada no número: $LINE_NUM"
-
-            NEW_LINE="- 🤓 Programador com (${NEW_AGE} anos) de idade"
-            echo "Nova linha a ser inserida: '$NEW_LINE'"
-
-            if [[ "$RUNNER_OS" == "macOS" ]]; then
-              sed -i '' "${LINE_NUM}s|.*|$NEW_LINE|" $README_FILE
-            else
-              sed -i "${LINE_NUM}s|.*|$NEW_LINE|" $README_FILE
-            fi
-            echo "README.md atualizado com idade: ${NEW_AGE}"
           fi
+          echo "Current age found in README: $CURRENT_AGE"
+          echo "current_age=$CURRENT_AGE" >> $GITHUB_OUTPUT
 
-      - name: Commit and Push Changes
+      - name: Calculate new age and update README
         run: |
-          if git diff --quiet $README_FILE; then
-            echo "Nenhuma alteração no README.md. Pulando commit e push."
+          CURRENT_AGE=${{ steps.get_age.outputs.current_age }}
+          AGE_INCREMENT=1
+          NEW_AGE=$((CURRENT_AGE + AGE_INCREMENT))
+          echo "-🤓 Programdor com $NEW_AGE anos de idade "
+          sed -i "s/[0-9]*/${NEW_AGE}/" README.md
+          if git diff --exit-code README.md; then
+            echo "No changes detected in README.md. Skipping commit."
           else
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add $README_FILE
-            git commit -m "Feliz Aniversário! Idade atualizada para ${NEW_AGE} anos 🎉"
-            git push origin main
+            echo "Changes detected in README.md. Committing and pushing."
+            git config user.name github-actions
+            git config user.email github-actions@github.com
+            git add README.md
+            git commit -m "Automated: Increment age in README to ${NEW_AGE}"
+            git push
           fi
