@@ -1,6 +1,6 @@
-# 🤓Enzo Frank Curi  
+# Enzo Frank Curi  
 ## 🌟 Sobre Mim  
-- 🎂 **Nascimento:** 30 de Outubro de 2006  
+- 🤓 Programador com \(
 - 🌎🇧🇷 **Nacionalidade:** Brasileiro 
 
 ## Sempre explorando novas tecnologias e aprimorando minhas habilidades. 
