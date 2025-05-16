@@ -1,7 +1,7 @@
 # Enzo Frank Curi  
 ## 🌟 Sobre Mim  
 - 🤓 **Minha idade:** 18
-- 🌎🇧🇷 **Nacionalidade:** Brasileiro 
+- 🌎 **Nacionalidade:** Brasileiro 
 
 ## Sempre explorando novas tecnologias e aprimorando minhas habilidades. 
 
