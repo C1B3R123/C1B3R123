@@ -1,4 +1,4 @@
-name: Update README Age (Calculate from Birth Date)
+name: Update README Age
 
 on:
   schedule:
@@ -17,32 +17,24 @@ jobs:
         id: calculate_age
         run: |
           BIRTH_DATE="2006-10-30"
-
           CURRENT_DATE=$(date +%Y-%m-%d)
-
           BIRTH_YEAR=$(date -d "$BIRTH_DATE" +%Y)
           BIRTH_MONTH=$(date -d "$BIRTH_DATE" +%m)
           BIRTH_DAY=$(date -d "$BIRTH_DATE" +%d)
-
           CURRENT_YEAR=$(date -d "$CURRENT_DATE" +%Y)
           CURRENT_MONTH=$(date -d "$CURRENT_DATE" +%m)
           CURRENT_DAY=$(date -d "$CURRENT_DATE" +%d)
-
           NEW_AGE=$((CURRENT_YEAR - BIRTH_YEAR))
-
           if (( 10#$CURRENT_MONTH < 10#$BIRTH_MONTH )) || (( 10#$CURRENT_MONTH == 10#$BIRTH_MONTH && 10#$CURRENT_DAY < 10#$BIRTH_DAY )); then
             NEW_AGE=$((NEW_AGE - 1))
           fi
-
           echo "Calculated age: $NEW_AGE"
           echo "calculated_age=$NEW_AGE" >> $GITHUB_OUTPUT
 
       - name: Update README with new age
         run: |
           NEW_AGE=${{ steps.calculate_age.outputs.calculated_age }}
-
-          sed -i "s/Minha idade:\s*[0-9]*/- 🤓 **Minha idade:** ${NEW_AGE}/" README.md
-
+          sed -i "s/^- 🤓 \*\*Minha idade:\*\*\s*\d+$/- 🤓 **Minha idade:** ${NEW_AGE}/" README.md
           if git diff --exit-code README.md; then
             echo "No changes detected in README.md. Skipping commit."
           else
