@@ -20,7 +20,7 @@ jobs:
         run: |
           set -x
           README_FILE="README.md"
-          SEARCH_PATTERN="^- Programador com \("
+          SEARCH_PATTERN="^- 🤓 Programador com \("
           LINE_NUM=$(grep -n -m 1 -E "$SEARCH_PATTERN" $README_FILE | cut -d : -f 1)
 
           if [ -z "$LINE_NUM" ]; then
