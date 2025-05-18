@@ -27,7 +27,7 @@ jobs:
           DAILY_COLOR="#${RANDOM_HEX}"
           echo "DAILY_COLOR=${DAILY_COLOR}" >> $GITHUB_OUTPUT
 
-      - name: Ensure output branch exists remotely
+      - name: Ensure output branch exists
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -48,7 +48,7 @@ jobs:
             dist/github-snake-lightdots.svg?color_snake=${{ steps.calculate_color.outputs.DAILY_COLOR }}&palette=github-light&sanitize=true
             dist/github-snake-darkdots.svg?color_snake=${{ steps.calculate_color.outputs.DAILY_COLOR }}&palette=github-dark&sanitize=true
 
-      - name: Deploy SVGs to GitHub Pages
+      - name: Deploy SVG
         uses: crazy-max/ghaction-github-pages@v2.1.3
         with:
           target_branch: output
