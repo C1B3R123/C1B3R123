@@ -24,6 +24,8 @@
   <img alt="GitHub Stats" src="https://github-readme-stats.vercel.app/api/?username=C1B3R123&show_icons=true&theme=default">
 </picture>
 
+[![trophy](https://github-profile-trophy.vercel.app/?username=C1B3R123)](https://github.com/C1B3R123/github-profile-trophy)
+
 ## 📫 Contatos
 [![Email](https://img.shields.io/badge/Email-Enviar%20Mensagem-red?style=for-the-badge&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=enzofrankcuri2020@gmail.com&su=Vi%20seu%20GitHub%20e%20tive%20interesse%20em%20seu%20perfil.&body=Olá%20Enzo%20vi%20seu%20Github%20e%20Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho.)
 [![WhatsApp](https://img.shields.io/badge/WhatsApp-Enviar%20Mensagem-25D366?style=for-the-badge&logo=whatsapp)](https://wa.me/5565999362432?text=Olá%20Enzo,%20Vi%20seu%20github%20e%20tive%20interesse%20em%20seu%20perfil.)
