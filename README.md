@@ -27,8 +27,8 @@
 <a href="https://github.com/C1B3R123/github-profile-trophy">
   <picture>
     <source media="(prefers-color-scheme: dark)" srcset="https://github-profile-trophy.vercel.app/?username=C1B3R123&theme=dark&no-bg=true" />
-    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=C1B3R123&theme=flat&no-bg=true" />
-    <img alt="GitHub Profile Trophies" src="https://github-profile-trophy.vercel.app/?username=C1B3R123&theme=flat&no-bg=true" />
+    <source media="(prefers-color-scheme: light)" srcset="https://github-profile-trophy.vercel.app/?username=C1B3R123&theme=flat" />
+    <img alt="GitHub Profile Trophies" src="https://github-profile-trophy.vercel.app/?username=C1B3R123&theme=flat"/>
   </picture>
 </a>
 
