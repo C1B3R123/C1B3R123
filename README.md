@@ -1,7 +1,7 @@
 # Enzo Frank Curi  
 ## 🌟 Sobre Mim  
 <!-- BIRTH_DATE:2006-10-30 -->
-- 🤓 **Minha idade:** 18
+- 🤓 **Minha idade:** 19
 - 🌎 **Nacionalidade:** Brasileiro
 ## Contatos
 [![Email](https://img.shields.io/badge/Email-Enviar%20Mensagem-red?style=for-the-badge&logo=gmail)](https://mail.google.com/mail/?view=cm&fs=1&to=enzofrankcuri2020@gmail.com&su=Vi%20seu%20GitHub%20e%20tive%20interesse%20em%20seu%20perfil.&body=Olá%20Enzo%20vi%20seu%20Github%20e%20Gostaria%20de%20saber%20mais%20sobre%20seu%20trabalho.) [![WhatsApp](https://img.shields.io/badge/WhatsApp-Enviar%20Mensagem-25D366?style=for-the-badge&logo=whatsapp)](https://wa.me/5565999362432?text=Olá%20Enzo,%20eu%20vi%20seu%20perfil%20no%20Github%20e%20tive%20interesse%20em%20seu%20trabalho.)
