@@ -1,7 +1,7 @@
 name: Update README Age
 on:
   schedule:
-    # Roda às 00:00 do dia 30 de Outubro (conforme seu original)
+    # Roda às 00:00 do dia 30 de Outubro
     - cron: '0 0 30 10 *'
   workflow_dispatch: # Permite rodar manualmente
 
@@ -41,10 +41,8 @@ jobs:
         run: |
           NEW_AGE=${{ steps.calculate_age.outputs.calculated_age }}
           
-          # Seu comando sed está perfeito para o README que você mandou
           sed -i "s/\(- 🤓 \*\*Minha idade:\*\*\s*\)\d+/\1${NEW_AGE}/" README.md
           
-          # Sua verificação de 'git diff' também é uma excelente prática
           if git diff --exit-code README.md; then
             echo "Nenhuma mudança na idade. Commit não necessário."
           else
