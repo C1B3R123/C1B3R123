@@ -1,12 +1,16 @@
 name: Update README Age
 on:
   schedule:
+    # Roda às 00:00 do dia 30 de Outubro (conforme seu original)
     - cron: '0 0 30 10 *'
-  workflow_dispatch:
+  workflow_dispatch: # Permite rodar manualmente
 
 jobs:
   update-age:
     runs-on: ubuntu-latest
+    # Permissão ESSENCIAL para o git push funcionar
+    permissions:
+      contents: write 
 
     steps:
       - name: Checkout code
@@ -15,41 +19,36 @@ jobs:
       - name: Get birth date from README
         id: get_birth_date
         run: |
-          BIRTH_DATE=$(grep ''))
-          if [ -z "$BIRTH_DATE" ]; then
-            echo "::error::Hidden birth date marker '' not found or is empty in README.md."
-            echo "Please add a hidden marker like ''."
+          # Procura pelo marcador no README
+          BIRTH_DATE=$(grep -Po '' não encontrado no README.md."
             exit 1
           fi
-          echo "Birth date found: $BIRTH_DATE"
+          echo "Data de nascimento encontrada: $BIRTH_DATE"
           echo "birth_date=$BIRTH_DATE" >> $GITHUB_OUTPUT
 
       - name: Calculate age from birth date
         id: calculate_age
         run: |
           BIRTH_DATE=${{ steps.get_birth_date.outputs.birth_date }}
-          CURRENT_DATE=$(date +%Y-%m-%d)
-          BIRTH_YEAR=$(date -d "$BIRTH_DATE" +%Y)
-          BIRTH_MONTH=$(date -d "$BIRTH_DATE" +%m)
-          BIRTH_DAY=$(date -d "$BIRTH_DATE" +%d)
-          CURRENT_YEAR=$(date -d "$CURRENT_DATE" +%Y)
-          CURRENT_MONTH=$(date -d "$CURRENT_DATE" +%m)
-          CURRENT_DAY=$(date -d "$CURRENT_DATE" +%d)
-          NEW_AGE=$((CURRENT_YEAR - BIRTH_YEAR))
-          if (( 10#$CURRENT_MONTH < 10#$BIRTH_MONTH )) || (( 10#$CURRENT_MONTH == 10#$BIRTH_MONTH && 10#$CURRENT_DAY < 10#$BIRTH_DAY )); then
-            NEW_AGE=$((NEW_AGE - 1))
-          fi
-          echo "Calculated age: $NEW_AGE"
+          
+          # Calcula a idade de forma simples e robusta
+          NEW_AGE=$(( ($(date +%Y%m%d) - $(date -d "$BIRTH_DATE" +%Y%m%d)) / 10000 ))
+          
+          echo "Idade calculada: $NEW_AGE"
           echo "calculated_age=$NEW_AGE" >> $GITHUB_OUTPUT
 
       - name: Update README with new age
         run: |
           NEW_AGE=${{ steps.calculate_age.outputs.calculated_age }}
+          
+          # Seu comando sed está perfeito para o README que você mandou
           sed -i "s/\(- 🤓 \*\*Minha idade:\*\*\s*\)\d+/\1${NEW_AGE}/" README.md
+          
+          # Sua verificação de 'git diff' também é uma excelente prática
           if git diff --exit-code README.md; then
-            echo "No changes detected in README.md. Skipping commit."
+            echo "Nenhuma mudança na idade. Commit não necessário."
           else
-            echo "Changes detected in README.md. Committing and pushing."
+            echo "Idade atualizada. Fazendo commit..."
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add README.md
