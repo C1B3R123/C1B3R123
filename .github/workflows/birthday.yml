@@ -15,7 +15,7 @@ jobs:
       - name: Get birth date from README
         id: get_birth_date
         run: |
-          BIRTH_DATE=$(grep ')')
+          BIRTH_DATE=$(grep ''))
           if [ -z "$BIRTH_DATE" ]; then
             echo "::error::Hidden birth date marker '' not found or is empty in README.md."
             echo "Please add a hidden marker like ''."
