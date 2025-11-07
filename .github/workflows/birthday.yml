@@ -20,7 +20,7 @@ jobs:
         id: get_birth_date
         run: |
           # Procura pelo marcador no README
-          BIRTH_DATE=$(grep -Po '' não encontrado no README.md."
+          BIRTH_DATE=$(grep -Po '' não encontrado no README.md.
             exit 1
           fi
           echo "Data de nascimento encontrada: $BIRTH_DATE"
