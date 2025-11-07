@@ -1,6 +1,6 @@
 # Enzo Frank Curi  
 ## 🌟 Sobre Mim  
-<!--'BIRTH_DATE:2006-10-30'-->
+<!-- BIRTH_DATE:2006-10-30 -->
 - 🤓 **Minha idade:** 18
 - 🌎 **Nacionalidade:** Brasileiro
 ## Contatos
