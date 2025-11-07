@@ -1,6 +1,6 @@
 # Enzo Frank Curi  
 ## 🌟 Sobre Mim  
-- 🤓 **Minha idade:** ``
+- 🤓 **Minha idade:** ''
 - 🌎 **Nacionalidade:** Brasileiro
   
 ## Contatos
