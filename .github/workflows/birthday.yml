@@ -20,7 +20,7 @@ jobs:
         id: get_birth_date
         run: |
           # Procura pelo marcador no README
-          BIRTH_DATE=$(grep -Po não encontrado no README.md.
+          BIRTH_DATE=$(grep -Po '' não encontrado no README.md."
             exit 1
           fi
           echo "Data de nascimento encontrada: $BIRTH_DATE"
@@ -32,7 +32,7 @@ jobs:
           BIRTH_DATE=${{ steps.get_birth_date.outputs.birth_date }}
           
           # Calcula a idade de forma simples e robusta
-          NEW_AGE=$(( ($(date +%Y%Y%m%d) - $(date -d "$BIRTH_DATE" +%Y%m%d)) / 10000 ))
+          NEW_AGE=$(( ($(date +%Y%m%d) - $(date -d "$BIRTH_DATE" +%Y%m%d)) / 10000 ))
           
           echo "Idade calculada: $NEW_AGE"
           echo "calculated_age=$NEW_AGE" >> $GITHUB_OUTPUT
