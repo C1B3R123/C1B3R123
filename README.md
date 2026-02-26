@@ -13,10 +13,10 @@ Lembre-se da cor da cobrinha e volte Amanhã 😋.
   <source media="(prefers-color-scheme: light)" srcset="https://github.com/C1B3R123/C1B3R123/blob/output/github-snake-lightdots.svg?raw=true">
   <img alt="GitHub Contribution Snake" src="https://github.com/C1B3R123/C1B3R123/blob/output/dist/github-snake-lightdots.svg?raw=true">
 </picture>
+##Aprendendo
 
 ![Ruby](https://img.shields.io/badge/Ruby-CC342D?style=for-the-badge&logo=ruby&logoColor=white) ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) ![PHP](https://img.shields.io/badge/PHP-777BB4?style=for-the-badge&logo=php&logoColor=white) ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) ![SQL](https://img.shields.io/badge/SQL-003B57?style=for-the-badge&logo=database&logoColor=white)
 
-##Aprendendo
 <picture >
   <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=dracula">
   <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=C1B3R123&layout=compact&langs_count=7&theme=default">
